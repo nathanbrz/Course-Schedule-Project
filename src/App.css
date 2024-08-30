@@ -1,42 +1,64 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.course-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 14rem);
+  justify-content: center; 
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.term-selectors {
+  display: flex;
+  gap: 1rem;
+}
+
+.selected {
+  background-color: #0d6efd;
+  color: rgb(255, 255, 255);
+}
+
+.cardHover:hover {
+  background-color: rgb(177, 177, 177);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modal {
+  display: block;
+  visibility: hidden;
 }
 
-button {
-  font-size: calc(10px + 2vmin);
+.modal-show {
+  visibility:visible;
+  background-color: rgba(169, 169, 169, 0.8);
+  transition: opacity 0.2s linear; 
+} 
+
+.modal-content  {
+  opacity: 0; 
+}
+
+.modal-show .modal-content  {
+  opacity: 1; 
+  transition: 0.2s linear; 
+}
+
+.modal-header {
+  margin-left: auto;
+}
+
+.plan-header{
+  text-align: center;
+  margin: 1rem;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.notBold{
+  font-weight: normal;
 }
