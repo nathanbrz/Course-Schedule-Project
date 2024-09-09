@@ -69,3 +69,20 @@
   opacity: 0.5;
   pointer-events: none;
 }
+
+.card {
+  position: relative; /* Ensure the card is the positioning context */
+}
+
+.edit-container {
+  position: absolute;
+  top: 8px; /* Adjust the top offset as needed */
+  right: 8px; /* Adjust the right offset as needed */
+  padding: 8px; /* Padding around the icon */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0d6efd; /* Example color for primary button */
+  color: white; /* Button text color */
+}
+

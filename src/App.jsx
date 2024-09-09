@@ -4,6 +4,7 @@ import "./App.css";
 import Banner from "./components/Banner";
 import { useJsonQuery } from "./utilities/schedule";
 import TermPage from "./components/TermPage";
+import Dispatcher from "./components/Dispatcher";
 
 const App = () => {
   const [schedule, isLoading, error] = useJsonQuery(
@@ -16,7 +17,7 @@ const App = () => {
   return (
     <div className="App">
       <Banner title={schedule.title} />
-      <TermPage course={schedule.courses} />
+      <Dispatcher schedule={schedule}/>
     </div>
   );
 };

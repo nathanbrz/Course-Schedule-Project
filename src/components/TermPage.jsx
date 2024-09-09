@@ -4,6 +4,7 @@ import CourseList from "./CourseList";
 import CoursePlanBtn from "./CoursePlanBtn";
 import Modal from "./Modal";
 import CoursePlan from "./CoursePlan";
+import { useNavigate } from "react-router-dom";
 
 export default function TermPage({ course }) {
   const [selection, setSelection] = useState("Fall");
@@ -17,9 +18,19 @@ export default function TermPage({ course }) {
   function closeModal() {
     setModalOpen(false);
   }
+  const navigate = useNavigate();
+
+  function handleNewClass() {
+    navigate("/course_form");
+  }
 
   return (
     <div>
+      <div className="btn-container">
+        <button className="btn btn-secondary mb-1 p-2" onClick={handleNewClass}>
+          Add New Class
+        </button>
+      </div>
       <div className="btn-container">
         <div className="term-selectors">
           <TermSelector
